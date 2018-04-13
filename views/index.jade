@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  .container-fluid
+    .row.mt-10
+      .col-md-10.col-md-offset-1.col-lg-6.col-lg-offset-3
+        table.table.filters
+          tbody
+              tr
+                td Filters:
+                td
+                  .checkbox
+                    label
+                      input#sf_check(type="checkbox", value="")
+                      | Soulflayer
+                td
+                  .checkbox
+                    label
+                      input#sft_check(type="checkbox", value="")
+                      | Soulflayer+transfer
+                td
+                  .checkbox
+                    label
+                      input(type="checkbox", value="")
+                      | Horde
+                td
+                  .form-group
+                    label(for="sel1") Class:&nbsp;
+                    select#sel1.form-control
+                      option --
+                      option deathknight
+                      option druid
+                      option demon_hunter
+                      option hunter
+                      option mage
+                      option monk
+                      option paladin
+                      option priest
+                      option priest
+                      option rogue
+                      option priest
+                      option shaman
+                      option warlock
+                      option warrior
+
+    .row.mt-10
+      .col-md-10.col-md-offset-1.col-lg-6.col-lg-offset-3
+        table.table.characters
+          thead
+            th Character
+            th Guild
+            th Raid
+            th Realm
+            th iLvl
+            th date
+          tbody
+            each subitem in responceHtml
+              each item in subitem
+                tr
+                  td
+                   a(class="#{item[0]['class']}",href="#{item[0]['href']}")= item[0]['name']
+                  td
+                   a(class="#{item[1]['class']}",href="#{item[1]['href']}")= item[1]['name']
+                  td= item[2]
+                  td= item[3]
+                  td= item[4]
+                  td= item[5]

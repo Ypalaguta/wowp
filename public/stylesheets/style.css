@@ -1,0 +1,43 @@
+body {
+  background: #272727;
+  color: #CCCCCC;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+td .checkbox, .radio {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+td select#sel1{
+  width: calc(100% - 55px);
+  display: inline-block;
+}
+td label[for=sel1]{
+  font-weight: 400;
+  margin-right: 10px;
+}
+table.filters tbody tr td {
+  vertical-align: middle;
+}
+table.filters tbody tr td .form-group {
+  margin: 0px;
+}
+.deathknight { color: #C41F3B }
+.druid { color: #FF7D0A }
+.demon_hunter { color: #A330C9 }
+.hunter { color: #ABD473 }
+.mage { color: #69CCF0 }
+.monk { color: #008467 }
+.paladin { color: #F58CBA }
+.priest { color: #FFFFFF }
+.rogue { color: #FFF569 }
+.shaman { color: #2459FF }
+.warlock { color: #9482CA }
+.warrior { color: #C79C6E }
+
+.horde { color: #CD2B00; }
+.alliance { color: #0C81CE; }
